@@ -1,69 +1,88 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h> // isdigit
-#include <unistd.h> // getopt
+#include <unistd.h>
 
-void printHead(const char* filename, int numLines) {
-	FILE* file = fopen(filename, "r");
-	if (file != NULL) {
-		char line[256];
-		int count = 0;
-		while (fgets(line, sizeof(line), file) != NULL && count < numLines) {
-			printf("%s", line);
-			count++;
-		}
-		fclose(file);
-	}
-	else {
-		fprintf(stderr, "Failed to open file: %s\n", filename);
-	}
-}
+#define DEFAULT_LINES 10
+#define DEFAULT_BYTES 0
 
-int isDigitStr(const char* str) {
-	for (int i = 0; i < strlen(str); i++) {
-		if (!isdigit(str[i])) return 0;
-	}
-	return 1;
-}
+int main(int argc, char* argv[]) {
+    int opt;
+    int num_lines = DEFAULT_LINES;
+    int num_bytes = DEFAULT_BYTES;
+    int use_lines = 1;
+    int quiet_mode = 0;
 
-int main(int argc, char** argv) {
-	int numLines = 10; // 기본적으로 10줄을 출력
-	const char* filename = NULL;
-	int cnt = argc;
-	if (isDigitStr(argv[argc - 1])) --cnt;
-	int opt = 0;
-	while ((opt = getopt(argc, argv, "n:")) != -1) {
-		switch (opt) {
-		case 'n':
-			numLines = atoi(optarg);
-			break;
-		default:
-			fprintf(stderr, "Usage: ./head [-n <num_lines>] <filename>\n");
-			return 1;
-		}
-	}
-	if (optind >= argc) {
-		fprintf(stderr, "Usage: ./head [-n <num_lines>] <filename>\n");
-		return 1;
-	}
-	if (argc >= 3 && strcmp(argv[1], "-n") == 0) {
-		cnt -= 3;
-	}
-	else if (argc >= 2) {
-		cnt -= 1;
-	}
-	else {
-		fprintf(stderr, "Usage: ./head <filename> <num_lines>\n");
-		fprintf(stderr, "Usage: ./head [-n <num_lines>] <filename>\n");
-		return 1;
-	}
-	for (int i = 0; i < cnt; i++) {
-		if (argc >= 3 && strcmp(argv[1], "-n") == 0) filename = argv[3 + i];
-		else if (argc >= 2) filename = argv[1 + i];
-		if (isDigitStr(filename)) break;
-		if (cnt != 1) fprintf(stderr, "=====> %s <=====\n", filename);
-		printHead(filename, numLines);
-	}
-	return 0;
+    while ((opt = getopt(argc, argv, "n:c:q")) != -1) {
+        switch (opt) {
+        case 'n':
+            num_lines = atoi(optarg);
+            use_lines = 1;
+            break;
+        case 'c':
+            num_bytes = atoi(optarg);
+            use_lines = 0;
+            break;
+        case 'q':
+            quiet_mode = 1;
+            break;
+        default:
+            fprintf(stderr, "Usage: %s [-n num_lines] [-c num_bytes] [-q] [file]\n", argv[0]);
+            exit(EXIT_FAILURE);
+        }
+    }
+
+    if (optind == argc) {
+        // No file provided, read from standard input
+        if (use_lines) {
+            char buffer[BUFSIZ];
+            int line_count = 0;
+
+            while (fgets(buffer, sizeof(buffer), stdin) != NULL && line_count < num_lines) {
+                printf("%s", buffer);
+                line_count++;
+            }
+        }
+        else {
+            // Read specified number of bytes
+            char buffer[num_bytes + 1];
+            fread(buffer, 1, num_bytes, stdin);
+            buffer[num_bytes] = '\0';
+            printf("%s", buffer);
+        }
+    }
+    else {
+        // Read from file(s)
+        for (int i = optind; i < argc; i++) {
+            FILE* file = fopen(argv[i], "r");
+            if (file == NULL) {
+                perror("fopen");
+                continue;
+            }
+
+            if (!quiet_mode) {
+                printf("==> %s <==\n", argv[i]);
+            }
+
+            if (use_lines) {
+                char buffer[BUFSIZ];
+                int line_count = 0;
+
+                while (fgets(buffer, sizeof(buffer), file) != NULL && line_count < num_lines) {
+                    printf("%s", buffer);
+                    line_count++;
+                }
+            }
+            else {
+                // Read specified number of bytes
+                char buffer[num_bytes + 1];
+                fread(buffer, 1, num_bytes, file);
+                buffer[num_bytes] = '\0';
+                printf("%s", buffer);
+            }
+
+            fclose(file);
+        }
+    }
+
+    return 0;
 }
