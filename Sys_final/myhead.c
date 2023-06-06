@@ -1,32 +1,29 @@
-﻿
-#include <iostream>
-#include <fstream>
-#include <string>
+#include <stdio.h>
 
-void printHead(const std::string& filename, int numLines) {
-    std::ifstream file(filename);
-    if (file.is_open()) {
-        std::string line;
+void printHead(const char* filename, int numLines) {
+    FILE* file = fopen(filename, "r");
+    if (file != NULL) {
+        char line[256];
         int count = 0;
-        while (std::getline(file, line) && count < numLines) {
-            std::cout << line << std::endl;
+        while (fgets(line, sizeof(line), file) != NULL && count < numLines) {
+            printf("%s", line);
             count++;
         }
-        file.close();
+        fclose(file);
     }
     else {
-        std::cerr << "Failed to open file: " << filename << std::endl;
+        fprintf(stderr, "Failed to open file: %s\n", filename);
     }
 }
 
 int main(int argc, char** argv) {
     if (argc < 3) {
-        std::cerr << "Usage: ./head <filename> <num_lines>" << std::endl;
+        fprintf(stderr, "Usage: ./head <filename> <num_lines>\n");
         return 1;
     }
 
-    std::string filename(argv[1]);
-    int numLines = std::stoi(argv[2]);
+    const char* filename = argv[1];
+    int numLines = atoi(argv[2]);
 
     printHead(filename, numLines);
 
