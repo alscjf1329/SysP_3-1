@@ -69,10 +69,9 @@
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/98c55d0a-9894-4396-a87d-07b60e0feb6a.png" width="500" height="250"/>
 ---
-## mytail.c
-+ 파일의 끝 부분을 출력하는 명령어
-+ 로그 파일이나 다른 텍스트 파일의 마지막 몇 줄을 확인하는 데 사용
-+ 출력할 줄 수 default = 10
+## mycat.c
++ "concatenate"의 줄임말
++ 파일의 내용을 화면에 출력하거나 여러 파일을 결합하는 데 사용되는 명령어
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/3867338b-ea8f-42e1-a108-bc771f392d1d" width="500" height="300"/>
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/f8fe40c2-9155-4d1c-8990-ae9122e869b8" width="500" height="300"/>
