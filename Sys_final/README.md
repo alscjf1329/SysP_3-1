@@ -14,15 +14,15 @@
   
 + v : 시작하는 행 번호를 지정합니다. 기본값 = 1
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/802708d3-7a68-4001-ad0a-81741ab8da73.png" width="400" height="100"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/df4c9bd4-ba42-4419-ac20-0151b927b102.png" width="400" height="100"/>
 
 + i : 행 번호의 증가 값을 지정합니다. 기본값 = 1
 
-  <img src=https://github.com/alscjf1329/SysP_3-1/assets/48661310/ae121042-0912-47dd-a814-34b7aa7e1be4.png" width="400" height="100"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/802708d3-7a68-4001-ad0a-81741ab8da73.png" width="400" height="100"/>
   
 + w, s, v, i : ./mynl -w 10 -s ".n"  -v 10 -i 5 test.txt
 
-  <img src=https://github.com/alscjf1329/SysP_3-1/assets/48661310/788d6a80-7f0e-43c4-bd83-5f9262f6cb10.png" width="400" height="100"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/fa3592d8-8368-4857-b823-744eefefc4ba.png" width="400" height="100"/>
   
 ## myhead.c
 + w
