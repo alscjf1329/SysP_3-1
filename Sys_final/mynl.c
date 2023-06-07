@@ -48,7 +48,7 @@ int main(int argc, char* argv[]) {
     }
 
     addLineNumbers(file, width, separator, startNumber, increment);
-
+    printf("\n");
     // Close the file if it's not stdin
     if (file != stdin) {
         fclose(file);

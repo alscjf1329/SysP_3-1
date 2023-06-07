@@ -3,7 +3,7 @@
 #include <unistd.h>
 
 #define DEFAULT_LINES 10
-#define DEFAULT_BYTES 0
+#define DEFAULT_BYTES 0 
 
 int main(int argc, char* argv[]) {
     int opt;
@@ -58,8 +58,7 @@ int main(int argc, char* argv[]) {
                 perror("fopen");
                 continue;
             }
-
-            if (!quiet_mode) {
+            if (!(argc - optind==1) && !quiet_mode) {
                 printf("==> %s <==\n", argv[i]);
             }
 
@@ -79,7 +78,7 @@ int main(int argc, char* argv[]) {
                 buffer[num_bytes] = '\0';
                 printf("%s", buffer);
             }
-
+            if ((i != argc - 1) && !quiet_mode) printf("\n");
             fclose(file);
         }
     }
