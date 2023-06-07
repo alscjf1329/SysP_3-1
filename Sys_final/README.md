@@ -5,7 +5,7 @@
 
 ### option
 + w : 행 번호의 너비를 지정할 수 있습니다. 기본값 = 6
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/eafda3d8-6db3-4c4b-ac97-46a3ce805f5f.png" width="400" height="100"/>
+<img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/eafda3d8-6db3-4c4b-ac97-46a3ce805f5f.png" width="400" height="100"/>
   
 + s : 행 번호와 텍스트 사이의 구분 기호를 지정할 수 있습니다. 기본값 = 탭(\t)
   ![image](https://github.com/alscjf1329/SysP_3-1/assets/48661310/138cc451-96b5-436b-a599-2876c64971d2)
