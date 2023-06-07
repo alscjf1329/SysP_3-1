@@ -1,7 +1,7 @@
 # 리눅스 명령어 구현
 파일명 작명 패턴 : my"리눅스 명령어".c
 ## mynl.c
-![image](https://github.com/alscjf1329/SysP_3-1/assets/48661310/3b512281-e786-4e26-a949-9584589f4512){: width="300" height="100"}
+<img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/3b512281-e786-4e26-a949-9584589f4512.png" width="300" height="100"/>
 
 ### option
 + w : 행 번호의 너비를 지정할 수 있습니다. 기본값 = 6
