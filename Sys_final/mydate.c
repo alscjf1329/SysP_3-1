@@ -13,7 +13,7 @@ int main() {
     time_info = localtime(&current_time);
 
     // 형식화된 시간 문자열 생성
-    strftime(time_buffer, sizeof(time_buffer), "%a %b %d %H:%M:%S %Y", time_info);
+    strftime(time_buffer, sizeof(time_buffer), "%a %b %e %H:%M:%S KST %Y", time_info);
 
     // 시간 출력
     printf("%s\n", time_buffer);
