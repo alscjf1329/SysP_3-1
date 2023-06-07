@@ -1,6 +1,9 @@
 # 리눅스 명령어 구현
 파일명 작명 패턴 : my"리눅스 명령어".c
 ## mynl.c
++ nl은 "number lines"의 약어
++ 텍스트 파일의 각 행에 번호를 할당하여 출력하는데 사용
++ 이를 통해 파일의 행을 쉽게 추적하고 텍스트의 특정 부분을 참조 가능
 <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/3b512281-e786-4e26-a949-9584589f4512.png" width="400" height="100"/>
 
 ### option
@@ -25,4 +28,8 @@
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/fa3592d8-8368-4857-b823-744eefefc4ba.png" width="500" height="50"/>
   
 ## myhead.c
-+ w
++ 텍스트 파일의 앞부분을 출력하는 데 사용
+  
++ n : 
++ c
++ q
