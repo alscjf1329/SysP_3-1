@@ -34,6 +34,7 @@
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/0f3fd380-17a0-4b73-8b42-887aa6fa063b.png" width="500" height="300"/>
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/e445b004-0cc6-40a7-83bc-3bfe9a61f3e5.png" width="500" height="300"/>
   
+### option
 + n : 출력할 줄의 수를 지정합니다.
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/cb9eaeee-401c-4da8-8bd4-2b5ab7e112dd.png" width="500" height="200"/>
@@ -53,7 +54,8 @@
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/3867338b-ea8f-42e1-a108-bc771f392d1d" width="500" height="300"/>
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/f8fe40c2-9155-4d1c-8990-ae9122e869b8" width="500" height="300"/>
-  
+
+### option  
 + n : 출력할 줄의 수를 지정합니다.
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/9ef12dad-23a8-4d23-8515-f7d0a33a7609" width="500" height="200"/>
