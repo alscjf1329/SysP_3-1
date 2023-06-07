@@ -30,6 +30,7 @@
 ## myhead.c
 + 텍스트 파일의 앞부분을 출력하는 데 사용
 + 출력할 줄 수 default = 10
+
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/0f3fd380-17a0-4b73-8b42-887aa6fa063b.png" width="500" height="300"/>
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/e445b004-0cc6-40a7-83bc-3bfe9a61f3e5.png" width="500" height="300"/>
   
