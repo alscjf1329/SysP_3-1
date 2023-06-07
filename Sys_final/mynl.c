@@ -1,46 +1,89 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <getopt.h>
+#include <unistd.h>
+
+void addLineNumbers(FILE* file, int width, char* separator, int startNumber, int increment);
+void printUsage(char* programName);
+int isBlankLine(const char* line);
 
 int main(int argc, char* argv[]) {
+    FILE* file;
     int opt;
-    char* separator = "\t"; // 기본 구분자
+    int width = 6;
+    char* separator = "\t";
+    int startNumber = 1;
+    int increment = 1;
 
-    // 옵션 처리를 위한 루프
-    while ((opt = getopt(argc, argv, "s:")) != -1) {
+    // Process options using getopt
+    while ((opt = getopt(argc, argv, "w:s:v:i:")) != -1) {
         switch (opt) {
-        case 's':
-            separator = optarg; // -s 옵션의 인자를 구분자로 설정
+        case 'w':
+            width = atoi(optarg);
             break;
-        case '?':
-            fprintf(stderr, "잘못된 옵션입니다.\n");
-            return 1;
+        case 's':
+            separator = optarg;
+            break;
+        case 'v':
+            startNumber = atoi(optarg);
+            break;
+        case 'i':
+            increment = atoi(optarg);
+            break;
+        default:
+            printUsage(argv[0]);
+            exit(EXIT_FAILURE);
         }
     }
 
-    // 파일명 인자가 없는 경우
-    if (optind >= argc) {
-        fprintf(stderr, "사용법: %s [-s 구분자] 파일...\n", argv[0]);
-        return 1;
-    }
-
-    // 파일 처리
-    int lineNumber = 1;
-    for (int i = optind; i < argc; i++) {
-        FILE* file = fopen(argv[i], "r");
+    // Open the file for reading or use stdin if no file is provided
+    if (optind < argc) {
+        file = fopen(argv[optind], "r");
         if (file == NULL) {
-            fprintf(stderr, "파일을 열 수 없습니다: %s\n", argv[i]);
-            continue;
+            perror("Error opening file");
+            exit(EXIT_FAILURE);
         }
+    }
+    else {
+        file = stdin;
+    }
 
-        char line[256];
-        while (fgets(line, sizeof(line), file) != NULL) {
-            printf("%d%s%s", lineNumber, separator, line);
-            lineNumber++;
-        }
+    addLineNumbers(file, width, separator, startNumber, increment);
 
+    // Close the file if it's not stdin
+    if (file != stdin) {
         fclose(file);
     }
 
     return 0;
+}
+
+void addLineNumbers(FILE* file, int width, char* separator, int startNumber, int increment) {
+    char line[BUFSIZ];
+    int lineNumber = startNumber;
+
+    // Read lines from the file and add line numbers
+    while (fgets(line, sizeof(line), file) != NULL) {
+        if (!isBlankLine(line)) {
+            printf("%*d%s%s", width, lineNumber, separator, line);
+            lineNumber += increment;
+        }
+        else {
+            printf("%s", line);
+        }
+    }
+}
+
+int isBlankLine(const char* line) {
+    int i = 0;
+    while (line[i] != '\0') {
+        if (line[i] != ' ' && line[i] != '\t' && line[i] != '\n' && line[i] != '\r') {
+            return 0;
+        }
+        i++;
+    }
+    return 1;
+}
+
+void printUsage(char* programName) {
+    fprintf(stderr, "Usage: %s [-w width] [-s separator] [-v startNumber] [-i increment] [file]\n", programName);
 }
