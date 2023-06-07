@@ -22,7 +22,7 @@
   
 + w, s, v, i : ./mynl -w 10 -s ".n"  -v 10 -i 5 test.txt
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/fa3592d8-8368-4857-b823-744eefefc4ba.png" width="600" height="100"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/fa3592d8-8368-4857-b823-744eefefc4ba.png" width="500" height="100"/>
   
 ## myhead.c
 + w
