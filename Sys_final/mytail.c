@@ -47,7 +47,7 @@ int main(int argc, char* argv[]) {
         }
 
         // 파일명 출력
-        if (!q) {
+        if (!(argc - optind == 1) && !q) {
             printf("==> %s <==\n", filename);
         }
 
@@ -65,7 +65,7 @@ int main(int argc, char* argv[]) {
         fclose(file);
 
         // 파일 간 구분을 위한 개행 출력
-        if (i < argc - 1 && !q) {
+        if (!(argc - i == 1) && !q) {
             printf("\n");
         }
     }
