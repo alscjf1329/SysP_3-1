@@ -7,19 +7,19 @@
 <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/3b512281-e786-4e26-a949-9584589f4512.png" width="400" height="100"/>
 
 ### option
-+ w : 행 번호의 너비를 지정할 수 있습니다. 기본값 = 6
++ w : 행 번호의 너비를 지정할 수 있습니다. default = 6
  
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/eafda3d8-6db3-4c4b-ac97-46a3ce805f5f.png" width="400" height="100"/>
   
-+ s : 행 번호와 텍스트 사이의 구분 기호를 지정할 수 있습니다. 기본값 = 탭(\t)
++ s : 행 번호와 텍스트 사이의 구분 기호를 지정할 수 있습니다. default = 탭(\t)
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/138cc451-96b5-436b-a599-2876c64971d2.png" width="400" height="100"/>
   
-+ v : 시작하는 행 번호를 지정합니다. 기본값 = 1
++ v : 시작하는 행 번호를 지정합니다. default = 1
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/df4c9bd4-ba42-4419-ac20-0151b927b102.png" width="400" height="100"/>
 
-+ i : 행 번호의 증가 값을 지정합니다. 기본값 = 1
++ i : 행 번호의 증가 값을 지정합니다. default = 1
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/802708d3-7a68-4001-ad0a-81741ab8da73.png" width="400" height="100"/>
   
@@ -29,7 +29,9 @@
   
 ## myhead.c
 + 텍스트 파일의 앞부분을 출력하는 데 사용
-  
-+ n : 
-+ c
-+ q
+
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/0f3fd380-17a0-4b73-8b42-887aa6fa063b.png" width="500" height="300"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/e445b004-0cc6-40a7-83bc-3bfe9a61f3e5.png" width="500" height="300"/>
++ n : 출력할 줄의 수를 지정합니다. default = 10
++ c : 출력할 바이트 수를 지정합니다. 
++ q : 파일 이름을 표시하지 않습니다. (파일 2개이상 읽을 시)
