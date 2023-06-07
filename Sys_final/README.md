@@ -45,3 +45,22 @@
 + q : 파일 이름을 표시하지 않습니다. (파일 2개이상 읽을 시)
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/f639c492-51cd-48a6-8af5-bd6031aff9f8.png" width="500" height="100"/>
+
+## mytail.c
++ 파일의 끝 부분을 출력하는 명령어
++ 로그 파일이나 다른 텍스트 파일의 마지막 몇 줄을 확인하는 데 사용
++ 출력할 줄 수 default = 10
+
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/36a4c532-8b2c-417f-be65-e456f623354a.png" width="500" height="300"/>
+  
++ n : 출력할 줄의 수를 지정합니다.
+
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/cb9eaeee-401c-4da8-8bd4-2b5ab7e112dd.png" width="500" height="200"/>
+  
++ c : 출력할 바이트 수를 지정합니다. 
+
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/1ee64d2d-18d8-4e6b-805c-f7c2bf79dfb7.png" width="500" height="50"/>
+  
++ q : 파일 이름을 표시하지 않습니다. (파일 2개이상 읽을 시)
+
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/f639c492-51cd-48a6-8af5-bd6031aff9f8.png" width="500" height="100"/>
