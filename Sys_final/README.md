@@ -29,9 +29,18 @@
   
 ## myhead.c
 + 텍스트 파일의 앞부분을 출력하는 데 사용
-
++ 출력할 줄 수 default = 10
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/0f3fd380-17a0-4b73-8b42-887aa6fa063b.png" width="500" height="300"/>
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/e445b004-0cc6-40a7-83bc-3bfe9a61f3e5.png" width="500" height="300"/>
-+ n : 출력할 줄의 수를 지정합니다. default = 10
+  
++ n : 출력할 줄의 수를 지정합니다.
+
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/cb9eaeee-401c-4da8-8bd4-2b5ab7e112dd.png" width="500" height="200"/>
+  
 + c : 출력할 바이트 수를 지정합니다. 
+
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/1ee64d2d-18d8-4e6b-805c-f7c2bf79dfb7.png" width="500" height="200"/>
+  
 + q : 파일 이름을 표시하지 않습니다. (파일 2개이상 읽을 시)
+
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/f639c492-51cd-48a6-8af5-bd6031aff9f8.png" width="500" height="200"/>
