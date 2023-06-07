@@ -60,8 +60,8 @@
   
 + c : 출력할 바이트 수를 지정합니다. 
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/d3c234d9-03d8-45dd-a3e0-6441f577fcd9.png" width="500" height="50"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/d3c234d9-03d8-45dd-a3e0-6441f577fcd9.png" width="500" height="100"/>
   
 + q : 파일 이름을 표시하지 않습니다. (파일 2개이상 읽을 시)
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/98c55d0a-9894-4396-a87d-07b60e0feb6a.png" width="500" height="100"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/98c55d0a-9894-4396-a87d-07b60e0feb6a.png" width="500" height="300"/>
