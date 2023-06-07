@@ -14,7 +14,7 @@
   
 + v : 시작하는 행 번호를 지정합니다. 기본값 = 1
 
-  <img src="![image](https://github.com/alscjf1329/SysP_3-1/assets/48661310/802708d3-7a68-4001-ad0a-81741ab8da73).png" width="400" height="100"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/802708d3-7a68-4001-ad0a-81741ab8da73.png" width="400" height="100"/>
 
 + i : 행 번호의 증가 값을 지정합니다. 기본값 = 1
 
