@@ -16,5 +16,5 @@
 + i : 행 번호의 증가 값을 지정합니다. 기본값 = 1
   ![image](https://github.com/alscjf1329/SysP_3-1/assets/48661310/ae121042-0912-47dd-a814-34b7aa7e1be4)
   
-+w, s, v, i : ./mynl -w 10 -s ".n"  -v 10 -i 5 test.txt
++ w, s, v, i : ./mynl -w 10 -s ".n"  -v 10 -i 5 test.txt
   ![image](https://github.com/alscjf1329/SysP_3-1/assets/48661310/788d6a80-7f0e-43c4-bd83-5f9262f6cb10)
