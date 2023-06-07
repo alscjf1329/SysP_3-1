@@ -68,14 +68,44 @@ int main(int argc, char *argv[]) {
                 }
             }
 
-            if (change_access_time || change_modification_time) {
+            if (change_access_time) {
                 struct utimbuf times;
                 if (date != NULL) {
                     struct tm tm;
                     strptime(date, "%Y-%m-%d %H:%M:%S", &tm);
-                    times.actime = times.modtime = mktime(&tm);
-                } else {
-                    times.actime = times.modtime = time(NULL);
+                    times.actime = mktime(&tm);
+                }
+                else {
+                    times.actime = time(NULL);
+                }
+                times.modtime = st.st_mtime;
+                utime(filename, &times);
+            }
+
+            if (change_modification_time) {
+                struct utimbuf times;
+                if (date != NULL) {
+                    struct tm tm;
+                    strptime(date, "%Y-%m-%d %H:%M:%S", &tm);
+                    times.modtime = mktime(&tm);
+                }
+                else {
+                    times.modtime = time(NULL);
+                }
+                times.actime = st.st_atime;
+                utime(filename, &times);
+            }
+
+            if (!change_modification_time && !change_access_time) {
+                struct utimbuf times;
+                if (date != NULL) {
+                    struct tm tm;
+                    strptime(date, "%Y-%m-%d %H:%M:%S", &tm);
+                    times.modtime = times.actime = mktime(&tm);
+                }
+                else {
+                    times.actime = st.st_atime;
+                    times.modtime = st.st_mtime;
                 }
                 utime(filename, &times);
             }
@@ -89,7 +119,64 @@ int main(int argc, char *argv[]) {
                 perror("chown");
                 exit(EXIT_FAILURE);
             }
-        } else {
+        }
+        else if (stat(filename, &st) == 0 && !create_file) {
+            if (!change_modification_time && !change_access_time) {
+                struct utimbuf times;
+                if (date != NULL) {
+                    struct tm tm;
+                    strptime(date, "%Y-%m-%d %H:%M:%S", &tm);
+                    times.modtime = times.actime = mktime(&tm);
+                }
+                else {
+                    times.actime = st.st_atime;
+                    times.modtime = st.st_mtime;
+                }
+                utime(filename, &times);
+            }
+            else {
+                struct utimbuf times;
+                if (date != NULL) {
+                    struct tm tm;
+                    strptime(date, "%Y-%m-%d %H:%M:%S", &tm);
+                    times.actime = times.modtime = mktime(&tm);
+                }
+                else {
+                    times.actime = times.modtime = time(NULL);
+                }
+                utime(filename, &times);
+            }
+        }
+        else if (stat(filename, &st) == 0 && create_file) {
+            if (change_access_time) {
+                struct utimbuf times;
+                if (date != NULL) {
+                    struct tm tm;
+                    strptime(date, "%Y-%m-%d %H:%M:%S", &tm);
+                    times.actime = mktime(&tm);
+                }
+                else {
+                    times.actime = time(NULL);
+                }
+                times.modtime = st.st_mtime;
+                utime(filename, &times);
+            }
+
+            if (change_modification_time) {
+                struct utimbuf times;
+                if (date != NULL) {
+                    struct tm tm;
+                    strptime(date, "%Y-%m-%d %H:%M:%S", &tm);
+                    times.modtime = mktime(&tm);
+                }
+                else {
+                    times.modtime = time(NULL);
+                }
+                times.actime = st.st_atime;
+                utime(filename, &times);
+            }
+        }
+        else {
             if (create_file) {
                 FILE *fp = fopen(filename, "w");
                 if (fp == NULL) {
@@ -104,7 +191,7 @@ int main(int argc, char *argv[]) {
                 if (date != NULL) {
                     struct tm tm;
                     strptime(date, "%Y-%m-%d %H:%M:%S", &tm);
-                    times.actime = times.modtime = mktime(&tm);
+                    times.actime = times.modtime = time(NULL);
                 } else {
                     times.actime = times.modtime = time(NULL);
                 }

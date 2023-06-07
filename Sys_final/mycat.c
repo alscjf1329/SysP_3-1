@@ -15,26 +15,47 @@ void display_file(const char* filename, int number_lines, int show_ends, int sho
     char buffer[BUFFER_SIZE];
     int lineNums = 1;
 
+    char firstNL = 1;
     while (fgets(buffer, BUFFER_SIZE, file) != NULL) {
         if (squeeze_blank && buffer[0] == '\n') {
+            if (!number_lines && firstNL) {
+                firstNL = 0;
+                printf("\n");
+            }
+            else if (!number_lines && !firstNL) {
+            }
+            else {
+                printf("\n");
+            }
             continue;
         }
 
+        firstNL = 1;
         if (number_lines) {
             printf("%6d  ", lineNums++);  // 라인 번호 출력
         }
-
-        for (int i = 0; buffer[i] != '\0'; i++) {
+        int i = 0;
+        while (buffer[i] != '\0') {
             if (show_ends && buffer[i] == '\n') {
                 printf("$\n");
             }
             else if (show_tabs && buffer[i] == '\t') {
                 printf("^I");
-            } else if (show_nonprint && (buffer[i] < 32 || buffer[i] > 126)) {
-                printf("^%c", buffer[i] + 64);
+            } else if (show_nonprint) {
+                if (buffer[i] == '\n' || buffer[i] == '\t') {
+                    printf("%c", buffer[i]);
+                }
+                else if (buffer[i] < 32 || buffer[i] > 126) {
+                    printf("^%c", buffer[i] + 64);
+                }
+                else {
+                    putchar(buffer[i]);
+                }
+                
             } else {
                 putchar(buffer[i]);
             }
+            i++;
         }
     }
 
