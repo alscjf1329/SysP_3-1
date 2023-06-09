@@ -106,9 +106,9 @@
 ## myyes.c (1개)
 + 뒤에 들어오는 인자를 계속 출력
 + 인자 default = 'y'
-  + yes SysP
+  + 'yes SysP'
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/04ac214a-f5af-472c-8430-2c3668b14f10.png" width="500" height="50"/>
-  + ./myyes SysP
+  + './myyes SysP'
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/04ac214a-f5af-472c-8430-2c3668b14f10.png" width="500" height="50"/>
 
 
