@@ -2,52 +2,43 @@
 #include <stdlib.h>
 #include <string.h>
 
-void reverse(char *str) {
-    unsigned int length = strlen(str);
-    unsigned int i, j;
-    for (i = 0, j = length - 1; i < j; i++, j--) {
-        char temp = str[i];
-        str[i] = str[j];
-        str[j] = temp;
+void printReverse(FILE* file) {
+    if (file == NULL) {
+        printf("파일을 열 수 없습니다.\n");
+        return;
     }
+
+    fseek(file, 0, SEEK_END);
+    long size = ftell(file);
+    fseek(file, 0, SEEK_SET);
+
+    char* buffer = (char*)malloc(size + 1);
+    if (buffer == NULL) {
+        printf("메모리 할당에 실패했습니다.\n");
+        return;
+    }
+
+    fread(buffer, 1, size, file);
+    buffer[size] = '\0';
+
+    for (long i = size - 1; i >= 0; i--) {
+        putchar(buffer[i]);
+    }
+
+    free(buffer);
 }
 
-int main(int argc, char *argv[]) {
-    char *line = NULL;
-    unsigned int line_length = 0;
-    int read;
-
-    if (argc>1){
-        FILE *file;
-        file = fopen(argv[1], "r");
-        if (file == NULL) {
-            perror("파일 열기 실패");
-            exit(EXIT_FAILURE);
-        }
-
-        while ((read = getline(&line, &line_length, file)) != -1) {
-            if (read > 1 && line[read - 1] == '\n') {
-                line[read - 1] = '\0';
-            }
-            reverse(line);
-            if (line[0]=='\n'){
-                printf("\n");
-                continue;
-            }
-            printf("%s\n", line);
-        }
+int main(int argc, char* argv[]) {
+    if (argc < 2) {
+        printf("파일 이름을 제공해야 합니다.\n");
+        return 1;
     }
-    else {
-        while ((read = getline(&line, &line_length, stdin)) != -1) {
-            if (line[read - 1] == '\n') {
-                line[read - 1] = '\0';
-            }
-            reverse(line);
-            printf("%s\n", line);
-        }
+
+    for (int i = 1; i < argc; i++) {
+        FILE* file = fopen(argv[i], "r");
+        printReverse(file);
+        fclose(file);
     }
-    
-    free(line);
 
     return 0;
 }
