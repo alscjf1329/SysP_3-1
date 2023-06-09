@@ -51,23 +51,16 @@ int main(int argc, char* argv[]) {
             printf("==> %s <==\n", filename);
         }
 
-        // 조건에 따라 출력
-        if (c > 0) {
-            // -c 옵션으로 지정된 문자 수만큼 출력
-            print_last_n_chars(file, c);
-        }
-        else {
-            // -n 옵션으로 지정된 줄 수만큼 출력
-            print_last_n_lines(file, n);
-        }
+        // -c 옵션인 경우
+        if (c > 0) print_last_n_chars(file, c);
+        // -n 옵션인 경우
+        else print_last_n_lines(file, n);
 
         // 파일 닫기
         fclose(file);
 
-        // 파일 간 구분을 위한 개행 출력
-        if (!(argc - i == 1) && !q) {
-            printf("\n");
-        }
+        // 받는 인자(파일명)가 2개이상일 시) 파일 간 구분을 위한 개행 출력
+        if (!(argc - i == 1) && !q) printf("\n");
     }
 
     return 0;
@@ -76,31 +69,34 @@ int main(int argc, char* argv[]) {
 // 지정된 파일에서 마지막 n줄을 출력하는 함수
 void print_last_n_lines(FILE* file, int n) {
     char buffer[BUFFER_SIZE][BUFFER_SIZE];
+    // 버퍼에 저장된 줄 수
     int count = 0;
 
     // 파일을 끝까지 읽으면서 버퍼를 순환시키면서 최근 n줄 유지
     while (fgets(buffer[count % n], BUFFER_SIZE, file) != NULL) {
         count++;
     }
-
+    // 시작 줄 설정
     int start = (count > n) ? (count % n) : 0;
+    // 출력할 줄 수
     int lines_to_print = (count > n) ? n : count;
-
-    for (int i = 0; i < lines_to_print; i++) {
-        printf("%s", buffer[(start + i) % n]);
-    }
+    
+    for (int i = 0; i < lines_to_print; i++) printf("%s", buffer[(start + i) % n]);
 }
 
 // 지정된 파일에서 마지막 n개의 문자를 출력하는 함수
+// FILE* file은 출력할 파일을 가리키는 파일 포인터입니다.
 void print_last_n_chars(FILE* file, int n) {
+    // fseek 함수를 사용하여 파일의 끝으로 이동
     fseek(file, 0, SEEK_END);
+    // 파일 포인터의 현재 위치를 알아냄 (file 크기를 구함)
     long file_size = ftell(file);
-
+    // 읽을 char 개수
     int chars_to_read = (n < file_size) ? n : file_size;
     char buffer[BUFFER_SIZE];
-
+    // fseek 함수를 사용하여 파일의 끝에서 (-chars_to_read)만큼 이동
     fseek(file, -chars_to_read, SEEK_END);
-
+    
     while (fgets(buffer, BUFFER_SIZE, file) != NULL) {
         printf("%s", buffer);
     }

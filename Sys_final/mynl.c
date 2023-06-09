@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
     int startNumber = 1;
     int increment = 1;
 
-    // Process options using getopt
+    // options 처리
     while ((opt = getopt(argc, argv, "w:s:v:i:")) != -1) {
         switch (opt) {
         case 'w':
@@ -30,12 +30,11 @@ int main(int argc, char* argv[]) {
             increment = atoi(optarg);
             break;
         default:
-            printUsage(argv[0]);
+            fprintf(stderr,"Usage: %s [-w width] [-s separator] [-v startNumber] [-i increment] [file]\n");
             exit(EXIT_FAILURE);
         }
     }
-
-    // Open the file for reading or use stdin if no file is provided
+    // 파일명 인자가 하나도 없는 경우
     if (optind < argc) {
         file = fopen(argv[optind], "r");
         if (file == NULL) {
@@ -43,13 +42,14 @@ int main(int argc, char* argv[]) {
             exit(EXIT_FAILURE);
         }
     }
+    // 파일명 
     else {
         file = stdin;
     }
-
+    
     addLineNumbers(file, width, separator, startNumber, increment);
     printf("\n");
-    // Close the file if it's not stdin
+
     if (file != stdin) {
         fclose(file);
     }
@@ -57,11 +57,11 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 
+// 번호를 붙여서 출력
 void addLineNumbers(FILE* file, int width, char* separator, int startNumber, int increment) {
     char line[BUFSIZ];
     int lineNumber = startNumber;
 
-    // Read lines from the file and add line numbers
     while (fgets(line, sizeof(line), file) != NULL) {
         if (!isBlankLine(line)) {
             printf("%*d%s%s", width, lineNumber, separator, line);
@@ -73,8 +73,10 @@ void addLineNumbers(FILE* file, int width, char* separator, int startNumber, int
     }
 }
 
+// 빈 줄인지 확인해주는 함수
 int isBlankLine(const char* line) {
     int i = 0;
+    // EOF확인
     while (line[i] != '\0') {
         if (line[i] != ' ' && line[i] != '\t' && line[i] != '\n' && line[i] != '\r') {
             return 0;
@@ -82,8 +84,4 @@ int isBlankLine(const char* line) {
         i++;
     }
     return 1;
-}
-
-void printUsage(char* programName) {
-    fprintf(stderr, "Usage: %s [-w width] [-s separator] [-v startNumber] [-i increment] [file]\n", programName);
 }
