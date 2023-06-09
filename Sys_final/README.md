@@ -94,5 +94,5 @@
 + "concatenate"의 줄임말
 + 파일의 내용을 화면에 출력하거나 여러 파일을 결합하는 데 사용되는 명령어
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/81599425-9086-4a33-a392-b17510b64a5a.png" width="300" height="200"/>
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/750555ea-47bc-4108-845e-5c6a741f779d.png" width="300" height="200"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/81599425-9086-4a33-a392-b17510b64a5a.png" width="500" height="100"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/750555ea-47bc-4108-845e-5c6a741f779d.png" width="500" height="100"/>
