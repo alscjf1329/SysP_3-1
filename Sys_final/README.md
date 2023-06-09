@@ -119,3 +119,16 @@
 
     <br/><img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/f0a1baeb-465a-42ee-a07e-6da6e16618ac.png" width="500" height="100"/>
 
+---
+## myfalse.c (1개)
++ 0을 return해줌
++ echo $? return 값 또는 전 명령어의 성공 여부를 출력 (성공시 0, 오류시 1)
+
+    <br/><img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/ebc19c2d-d859-4f59-8363-b24013af5f0d.png" width="500" height="100"/>
+
+---
+## myrev.c (1개)
++ 0을 return해줌
++ echo $? return 값 또는 전 명령어의 성공 여부를 출력 (성공시 0, 오류시 1)
+
+    <br/><img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/ebc19c2d-d859-4f59-8363-b24013af5f0d.png" width="500" height="100"/>
