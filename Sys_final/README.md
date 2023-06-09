@@ -69,7 +69,7 @@
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/98c55d0a-9894-4396-a87d-07b60e0feb6a.png" width="500" height="250"/>
 ---
-## mycat.c (4개)
+## mycat.c (7개)
 + "concatenate"의 줄임말
 + 파일의 내용을 화면에 출력하거나 여러 파일을 결합하는 데 사용되는 명령어
 
@@ -96,12 +96,13 @@
 
 + v : 제어 문자를 가진 줄을 확장하여 출력합니다. 
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/98c55d0a-9894-4396-a87d-07b60e0feb6a.png" width="500" height="250"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/b00909d5-3d2c-4ba7-943e-77ac83ee6765" width="500" height="500"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/54e4df7e-ec4f-4382-b04f-31e45d29cc53" width="500" height="500"/>
 
 + s : 연속된 빈 줄을 하나의 빈 줄로 압축하여 출력합니다.
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/98c55d0a-9894-4396-a87d-07b60e0feb6a.png" width="500" height="250"/>
-
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/1fa832d0-a290-4fd5-b380-1109d67511c2" width="500" height="500"/>
+  
 ---
 ## myclear.c (1개)
 + 터미널 화면을 지우는 명령어
