@@ -132,3 +132,9 @@
 
     <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/871475c9-12af-4c77-91ee-fd73d171eafc.png" width="500" height="100"/>
     <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/c7322b91-0d25-412e-8c31-f9f9fad9b909.png" width="500" height="100"/>
+
+---
+## mydate.c (1개)
++ 현재 시간을 출력함
+
+    <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/c88575f4-5385-4970-9e72-f98f8b2c2d95" width="500" height="100"/>
