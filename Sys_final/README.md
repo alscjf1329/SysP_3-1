@@ -106,9 +106,16 @@
 ## myyes.c (1개)
 + 뒤에 들어오는 인자를 계속 출력
 + 인자 default = 'y'
-  + `yes SysP` 
-    <br/><img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/04ac214a-f5af-472c-8430-2c3668b14f10.png" width="500" height="50"/>
-  + `./myyes SysP` 
-    <br/><img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/04ac214a-f5af-472c-8430-2c3668b14f10.png" width="500" height="50"/>
 
+  + `yes SysP` 
+    <br/><img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/04ac214a-f5af-472c-8430-2c3668b14f10.png" width="500" height="100"/>
+  + `./myyes SysP` 
+    <br/><img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/04ac214a-f5af-472c-8430-2c3668b14f10.png" width="500" height="100"/>
+
+---
+## mytrue.c (1개)
++ 1을 return해줌
++ echo $? return 값 또는 전 명령어의 성공 여부를 출력 (성공시 0, 오류시 1)
+
+    <br/><img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/f0a1baeb-465a-42ee-a07e-6da6e16618ac.png" width="500" height="100"/>
 
