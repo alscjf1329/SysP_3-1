@@ -164,3 +164,9 @@
 + 주어진 텍스트나 변수의 값을 출력하는 간단한 방법으로 사용
 
     <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/f7685510-45a7-4b41-98f4-24528096a5ca" width="500" height="100"/>
+    
+---
+## mypwd.c (1개)
++ 현재 위치 출력
+
+    <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/74283a91-1422-41ee-b525-564f63a2622b" width="500" height="100"/>
