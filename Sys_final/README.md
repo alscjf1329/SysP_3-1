@@ -1,7 +1,7 @@
 # 리눅스 명령어 구현
 파일명 작명 패턴 : my"리눅스 명령어".c
 ---
-## mynl.c
+## mynl.c (5개)
 + nl은 "number lines"의 약어
 + 텍스트 파일의 각 행에 번호를 할당하여 출력하는데 사용
 + 이를 통해 파일의 행을 쉽게 추적하고 텍스트의 특정 부분을 참조 가능
@@ -28,7 +28,7 @@
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/fa3592d8-8368-4857-b823-744eefefc4ba.png" width="500" height="50"/>
 ---
-## myhead.c
+## myhead.c (4개)
 + 텍스트 파일의 앞부분을 출력하는 데 사용
 + 출력할 줄 수 default = 10
 
@@ -48,7 +48,7 @@
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/f639c492-51cd-48a6-8af5-bd6031aff9f8.png" width="500" height="100"/>
 ---
-## mytail.c
+## mytail.c (4개)
 + 파일의 끝 부분을 출력하는 명령어
 + 로그 파일이나 다른 텍스트 파일의 마지막 몇 줄을 확인하는 데 사용
 + 출력할 줄 수 default = 10
@@ -69,7 +69,7 @@
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/98c55d0a-9894-4396-a87d-07b60e0feb6a.png" width="500" height="250"/>
 ---
-## mycat.c
+## mycat.c (4개)
 + "concatenate"의 줄임말
 + 파일의 내용을 화면에 출력하거나 여러 파일을 결합하는 데 사용되는 명령어
 
@@ -88,3 +88,11 @@
 + q : 파일 이름을 표시하지 않습니다. (파일 2개이상 읽을 시)
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/98c55d0a-9894-4396-a87d-07b60e0feb6a.png" width="500" height="250"/>
+
+---
+## myclear.c (1개)
++ "concatenate"의 줄임말
++ 파일의 내용을 화면에 출력하거나 여러 파일을 결합하는 데 사용되는 명령어
+
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/81599425-9086-4a33-a392-b17510b64a5a.png" width="300" height="200"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/750555ea-47bc-4108-845e-5c6a741f779d.png" width="300" height="200"/>
