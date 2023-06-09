@@ -74,24 +74,25 @@
 + 파일의 내용을 화면에 출력하거나 여러 파일을 결합하는 데 사용되는 명령어
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/d2597b0a-b11e-421b-8668-34feb715756cd" width="500" height="100"/>
-  <img src="![image](https://github.com/alscjf1329/SysP_3-1/assets/48661310/adba529e-bce6-4e05-9d72-1dfde8e60c92)" width="500" height="100"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/adba529e-bce6-4e05-9d72-1dfde8e60c92" width="500" height="100"/>
 
 ### option  
 + n : 각 줄에 번호를 붙여서 출력합니다.
 
-  <img src="![image](https://github.com/alscjf1329/SysP_3-1/assets/48661310/ebe65cb0-bb06-4024-b2f2-417f9bbbaa86)" width="500" height="200"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/ebe65cb0-bb06-4024-b2f2-417f9bbbaa86" width="500" height="200"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/b281807b-eaa2-4f4d-bbf0-3116fa1a694d" width="500" height="200"/>
   
 + b : -n 옵션과 유사하지만, 빈 줄에는 번호를 붙이지 않습니다. 
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/d3c234d9-03d8-45dd-a3e0-6441f577fcd9.png" width="500" height="150"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/c95e83c7-636c-4c62-8876-c099e5ba604a" width="500" height="500"/>
   
 + E : 각 줄의 끝에 $ 기호를 추가하여 출력합니다.
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/98c55d0a-9894-4396-a87d-07b60e0feb6a.png" width="500" height="250"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/b27dfcac-b7ee-49a4-af53-9b47f7d9d805" width="500" height="500"/>
   
 + T : 탭 문자를 ^I로 대체하여 출력합니다.
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/98c55d0a-9894-4396-a87d-07b60e0feb6a.png" width="500" height="250"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/5b4b45ba-7c62-4fc5-8e21-63d84a758270" width="500" height="500"/>
 
 + v : 제어 문자를 가진 줄을 확장하여 출력합니다. 
 
