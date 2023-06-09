@@ -95,3 +95,9 @@
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/81599425-9086-4a33-a392-b17510b64a5a.png" width="500" height="100"/>
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/750555ea-47bc-4108-845e-5c6a741f779d.png" width="500" height="100"/>
+
+---
+## mybasename.c (1개)
++ 주어진 경로에서 마지막 경로만 추출하는 명령어
+
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/efd2ad4c-42f3-4367-9771-f525234fb602.png" width="500" height="100"/>
