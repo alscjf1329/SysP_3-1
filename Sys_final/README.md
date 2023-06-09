@@ -73,13 +73,13 @@
 + "concatenate"의 줄임말
 + 파일의 내용을 화면에 출력하거나 여러 파일을 결합하는 데 사용되는 명령어
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/3867338b-ea8f-42e1-a108-bc771f392d1d" width="500" height="300"/>
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/f8fe40c2-9155-4d1c-8990-ae9122e869b8" width="500" height="300"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/d2597b0a-b11e-421b-8668-34feb715756cd" width="500" height="100"/>
+  <img src="![image](https://github.com/alscjf1329/SysP_3-1/assets/48661310/adba529e-bce6-4e05-9d72-1dfde8e60c92)" width="500" height="100"/>
 
 ### option  
 + n : 각 줄에 번호를 붙여서 출력합니다.
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/9ef12dad-23a8-4d23-8515-f7d0a33a7609" width="500" height="200"/>
+  <img src="![image](https://github.com/alscjf1329/SysP_3-1/assets/48661310/ebe65cb0-bb06-4024-b2f2-417f9bbbaa86)" width="500" height="200"/>
   
 + b : -n 옵션과 유사하지만, 빈 줄에는 번호를 붙이지 않습니다. 
 
