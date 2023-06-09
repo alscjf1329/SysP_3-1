@@ -149,7 +149,7 @@
 
 ---
 ## mydate.c (1개)
-+ 현재 시간을 출력함
++ 현재 시간을 출력
 
     <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/c88575f4-5385-4970-9e72-f98f8b2c2d95" width="500" height="100"/>
     
@@ -159,4 +159,8 @@
 
     <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/f0f0faa6-5310-43dc-a325-0a8a4189b5c1" width="500" height="100"/>
 
+---
+## myecho.c (1개)
++ 주어진 텍스트나 변수의 값을 출력하는 간단한 방법으로 사용
 
+    <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/f7685510-45a7-4b41-98f4-24528096a5ca" width="500" height="100"/>
