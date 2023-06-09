@@ -77,15 +77,27 @@
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/f8fe40c2-9155-4d1c-8990-ae9122e869b8" width="500" height="300"/>
 
 ### option  
-+ n : 출력할 줄의 수를 지정합니다.
++ n : 각 줄에 번호를 붙여서 출력합니다.
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/9ef12dad-23a8-4d23-8515-f7d0a33a7609" width="500" height="200"/>
   
-+ c : 출력할 바이트 수를 지정합니다. 
++ b : -n 옵션과 유사하지만, 빈 줄에는 번호를 붙이지 않습니다. 
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/d3c234d9-03d8-45dd-a3e0-6441f577fcd9.png" width="500" height="150"/>
   
-+ q : 파일 이름을 표시하지 않습니다. (파일 2개이상 읽을 시)
++ E : 각 줄의 끝에 $ 기호를 추가하여 출력합니다.
+
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/98c55d0a-9894-4396-a87d-07b60e0feb6a.png" width="500" height="250"/>
+  
++ T : 탭 문자를 ^I로 대체하여 출력합니다.
+
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/98c55d0a-9894-4396-a87d-07b60e0feb6a.png" width="500" height="250"/>
+
++ v : 제어 문자를 가진 줄을 확장하여 출력합니다. 
+
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/98c55d0a-9894-4396-a87d-07b60e0feb6a.png" width="500" height="250"/>
+
++ s : 연속된 빈 줄을 하나의 빈 줄로 압축하여 출력합니다.
 
   <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/98c55d0a-9894-4396-a87d-07b60e0feb6a.png" width="500" height="250"/>
 
