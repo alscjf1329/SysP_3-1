@@ -152,3 +152,11 @@
 + 현재 시간을 출력함
 
     <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/c88575f4-5385-4970-9e72-f98f8b2c2d95" width="500" height="100"/>
+    
+---
+## myhostname.c (1개)
++ 현재 호스트 이름을 출력
+
+    <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/f0f0faa6-5310-43dc-a325-0a8a4189b5c1" width="500" height="100"/>
+
+
