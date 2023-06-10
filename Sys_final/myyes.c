@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {s
     // 인자가 들어올 시
     if (argc > 1){
         while (1){

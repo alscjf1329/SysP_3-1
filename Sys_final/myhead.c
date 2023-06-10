@@ -40,7 +40,7 @@ int main(int argc, char* argv[]) {
 			// 출력할 파일이 1개가 아니고 -q 옵션이 아닐시
 			// 파일명 출력
 			if (!(argc - optind == 1) && !quiet_mode) printf("==> %s <==\n", argv[i]);
-			// n option인지 아닌지ㄴ
+			// n option인지 아닌지
 			if (use_lines) print_lines(file);
 			else print_bytes(file);
 			// 출력 파일 수가 1개이고 q option이 아닐 경우
