@@ -79,25 +79,25 @@
 ### option  
 + n : 각 줄에 번호를 붙여서 출력합니다.
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/ebe65cb0-bb06-4024-b2f2-417f9bbbaa86" width="500" height="200"/>
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/b281807b-eaa2-4f4d-bbf0-3116fa1a694d" width="500" height="200"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/ebe65cb0-bb06-4024-b2f2-417f9bbbaa86" width="500" height="100"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/b281807b-eaa2-4f4d-bbf0-3116fa1a694d" width="500" height="100"/>
   
 + b : -n 옵션과 유사하지만, 빈 줄에는 번호를 붙이지 않습니다. 
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/c95e83c7-636c-4c62-8876-c099e5ba604a" width="500" height="500"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/c95e83c7-636c-4c62-8876-c099e5ba604a" width="500" height="400"/>
   
 + E : 각 줄의 끝에 $ 기호를 추가하여 출력합니다.
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/b27dfcac-b7ee-49a4-af53-9b47f7d9d805" width="500" height="500"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/b27dfcac-b7ee-49a4-af53-9b47f7d9d805" width="500" height="400"/>
   
 + T : 탭 문자를 ^I로 대체하여 출력합니다.
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/5b4b45ba-7c62-4fc5-8e21-63d84a758270" width="500" height="500"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/5b4b45ba-7c62-4fc5-8e21-63d84a758270" width="500" height="400"/>
 
 + v : 제어 문자를 가진 줄을 확장하여 출력합니다. 
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/b00909d5-3d2c-4ba7-943e-77ac83ee6765" width="500" height="500"/>
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/54e4df7e-ec4f-4382-b04f-31e45d29cc53" width="500" height="500"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/b00909d5-3d2c-4ba7-943e-77ac83ee6765" width="500" height="400"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/54e4df7e-ec4f-4382-b04f-31e45d29cc53" width="500" height="400"/>
 
 + s : 연속된 빈 줄을 하나의 빈 줄로 압축하여 출력합니다.
 
