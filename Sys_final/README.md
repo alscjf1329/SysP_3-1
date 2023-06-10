@@ -96,8 +96,8 @@
 
 + v : 제어 문자를 가진 줄을 확장하여 출력합니다. 
 
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/b00909d5-3d2c-4ba7-943e-77ac83ee6765" width="500" height="400"/>
-  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/54e4df7e-ec4f-4382-b04f-31e45d29cc53" width="500" height="400"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/b00909d5-3d2c-4ba7-943e-77ac83ee6765" width="600" height="400"/>
+  <img src="https://github.com/alscjf1329/SysP_3-1/assets/48661310/54e4df7e-ec4f-4382-b04f-31e45d29cc53" width="600" height="400"/>
 
 + s : 연속된 빈 줄을 하나의 빈 줄로 압축하여 출력합니다.
 
