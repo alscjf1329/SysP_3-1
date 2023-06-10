@@ -62,7 +62,8 @@ void display_file(const char* filename) {
     int lineNums = 1;
     int firstNL = 1;
     while (fgets(buffer, BUFFER_SIZE, file) != NULL) {
-        // s option (여러개의 공백을 하나로 줄여줌)이면서 '\n'인 경우
+        // '\n'인 경우 처리
+        // s option (여러개의 공백을 하나로 줄여줌) 나머지는 그래로 출력
         if (squeeze_blank && buffer[0] == '\n') {
             // b option을 제외하기 위해
             if (!number_lines) {
@@ -78,17 +79,17 @@ void display_file(const char* filename) {
         }
 
         firstNL = 1;
+        // 라인 번호 출력
         if (number_lines) {
-            printf("%6d  ", lineNums++);  // 라인 번호 출력
+            printf("%6d  ", lineNums++);  
         }
         int i = 0;
         while (buffer[i] != '\0') {
-            if (show_ends && buffer[i] == '\n') {
-                printf("$\n");
-            }
-            else if (show_tabs && buffer[i] == '\t') {
-                printf("^I");
-            }
+            // E option
+            if (show_ends && buffer[i] == '\n') printf("$\n");
+            // T option
+            else if (show_tabs && buffer[i] == '\t') printf("^I");
+            // v option
             else if (show_nonprint) {
                 if (buffer[i] == '\n' || buffer[i] == '\t') {
                     printf("%c", buffer[i]);
@@ -101,9 +102,7 @@ void display_file(const char* filename) {
                 }
 
             }
-            else {
-                putchar(buffer[i]);
-            }
+            else putchar(buffer[i]);
             i++;
         }
     }

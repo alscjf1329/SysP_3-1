@@ -3,12 +3,14 @@
 #include <string.h>
 
 void printReverse(FILE* file) {
+    // 파일 없을시
     if (file == NULL) {
         printf("파일을 열 수 없습니다.\n");
         return;
     }
 
     fseek(file, 0, SEEK_END);
+    // 전체 바이트 수
     long size = ftell(file);
     fseek(file, 0, SEEK_SET);
 
@@ -20,7 +22,8 @@ void printReverse(FILE* file) {
 
     fread(buffer, 1, size, file);
     buffer[size] = '\0';
-
+    
+    // 반대로 버퍼에 넣기
     for (long i = size - 1; i >= 0; i--) {
         putchar(buffer[i]);
     }
