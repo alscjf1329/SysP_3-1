@@ -36,24 +36,17 @@ int main(int argc, char* argv[]) {
     }
     // 파일명 인자가 하나도 없는 경우
     if (optind < argc) {
+        // r모드로 argv[optind]를 열고 file에 저장
         file = fopen(argv[optind], "r");
         if (file == NULL) {
             perror("Error opening file");
             exit(EXIT_FAILURE);
         }
     }
-    // 파일명 
-    else {
-        file = stdin;
-    }
     
     addLineNumbers(file, width, separator, startNumber, increment);
     printf("\n");
-
-    if (file != stdin) {
-        fclose(file);
-    }
-
+    fclose(file);
     return 0;
 }
 
