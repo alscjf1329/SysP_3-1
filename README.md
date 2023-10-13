@@ -14,7 +14,11 @@
 2. mask field인 "1"에 비트연산자인 "&"를 통해 계산
 ### 결과 화면
 <img width="391" alt="image" src="https://user-images.githubusercontent.com/48661310/230378082-e02719eb-3c80-4700-8d74-7257815aa628.png">
-
+</hr>
+</hr>
+</hr>
+</hr>
+</hr>
 ## 리눅스 명령어 구현
 파일명 작명 패턴 : my"리눅스 명령어".c
 ---
